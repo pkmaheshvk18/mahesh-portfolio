@@ -1,27 +1,21 @@
 body {
   margin: 0;
-  font-family: Arial;
-  background: #0f172a;
+  font-family: 'Segoe UI';
+  background: #020617;
   color: white;
 }
 
 header {
-  background: #020617;
-  padding: 15px 50px;
-}
-
-nav {
   display: flex;
   justify-content: space-between;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.8);
 }
 
 nav a {
+  margin: 0 10px;
   color: white;
   text-decoration: none;
 }
@@ -30,28 +24,33 @@ nav a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 80px;
+  height: 100vh;
 }
 
 .hero-text h1 {
-  font-size: 40px;
+  font-size: 50px;
+}
+
+.hero-text h2 {
+  color: #38bdf8;
 }
 
 .hero-img img {
-  width: 250px;
+  width: 280px;
   border-radius: 50%;
+  box-shadow: 0 0 40px #38bdf8;
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 12px 25px;
   background: #38bdf8;
   color: black;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 section {
-  padding: 50px;
+  padding: 80px;
 }
 
 .cards {
@@ -60,7 +59,20 @@ section {
 }
 
 .card {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.skills span {
   background: #1e293b;
-  padding: 20px;
+  padding: 10px 15px;
+  margin: 5px;
+  display: inline-block;
   border-radius: 10px;
 }
