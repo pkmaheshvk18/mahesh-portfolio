@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mahesh Kuruva | DevOps Engineer</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Mahesh Kuruva | DevOps Engineer</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
+  <h2>Mahesh</h2>
   <nav>
-    <h2>Mahesh</h2>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-text">
-    <h1>Hi, I'm Mahesh 👋</h1>
-    <h2>DevOps Engineer</h2>
-    <p>I build scalable cloud systems & reduce infrastructure costs.</p>
-    <a href="#projects" class="btn">View Work</a>
+    <h1>Mahesh Kuruva</h1>
+    <h2 id="typing"></h2>
+    <p>Reduced AWS costs by 90% through smart cloud engineering.</p>
+    <a href="#projects" class="btn">Explore Work</a>
   </div>
+
   <div class="hero-img">
-    <img src="image.jpg" alt="Mahesh">
+    <img src="image.jpg">
   </div>
 </section>
 
 <section id="about">
   <h2>About Me</h2>
   <p>
-    DevOps Engineer with experience in AWS, Kubernetes, and Terraform.
-    I specialize in automation, CI/CD pipelines, and cost optimization.
-    Reduced AWS costs by 90% using smart engineering.
+    Cloud & DevOps Engineer with 1+ year experience in automating deployments,
+    managing cloud-native applications, and optimizing infrastructure costs.
+    Skilled in AWS, Kubernetes, Terraform, and CI/CD pipelines.
   </p>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <h3>DevOps Engineer – Kanilebettu Technologies</h3>
+    <ul>
+      <li>Built CI/CD pipelines for ECS & EKS</li>
+      <li>Automated infrastructure using Terraform</li>
+      <li>Implemented Istio & Keycloak security</li>
+      <li>Reduced CloudWatch costs by 90%</li>
+      <li>Replaced ALB with Nginx (100% dev cost saving)</li>
+    </ul>
+  </div>
 </section>
 
 <section id="projects">
@@ -44,18 +60,29 @@
   <div class="cards">
     <div class="card">
       <h3>Mercotrace SaaS</h3>
-      <p>Built scalable cloud system with CI/CD and authentication using Keycloak.</p>
+      <p>Multi-environment cloud system with CI/CD and Keycloak authentication.</p>
     </div>
+
     <div class="card">
-      <h3>AWS Automation</h3>
-      <p>Automated infrastructure using Terraform and AWS CLI.</p>
+      <h3>AWS Cost Optimization</h3>
+      <p>Achieved 90% cost reduction using log optimization and resource tuning.</p>
     </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>AWS</span><span>Kubernetes</span><span>Terraform</span>
+    <span>Docker</span><span>Jenkins</span><span>GitLab CI</span>
+    <span>Prometheus</span><span>Grafana</span><span>Istio</span>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <p>Email: maheshkuruvamahesh65@gmail.com</p>
+  <p>LinkedIn: linkedin.com/in/iammaheshkuruva</p>
 </section>
 
 <script src="script.js"></script>
