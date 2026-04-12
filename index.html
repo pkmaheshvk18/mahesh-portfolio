@@ -8,46 +8,56 @@
 <body>
 
 <header>
-  <h1>Mahesh Kuruva</h1>
-  <p>DevOps Engineer | Cloud Specialist</p>
+  <nav>
+    <h2>Mahesh</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<section>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hi, I'm Mahesh 👋</h1>
+    <h2>DevOps Engineer</h2>
+    <p>I build scalable cloud systems & reduce infrastructure costs.</p>
+    <a href="#projects" class="btn">View Work</a>
+  </div>
+  <div class="hero-img">
+    <img src="image.jpg" alt="Mahesh">
+  </div>
+</section>
+
+<section id="about">
   <h2>About Me</h2>
-  <p>I am a DevOps Engineer experienced in AWS, Kubernetes, and Terraform. I focus on automation, scalability, and cost optimization.</p>
+  <p>
+    DevOps Engineer with experience in AWS, Kubernetes, and Terraform.
+    I specialize in automation, CI/CD pipelines, and cost optimization.
+    Reduced AWS costs by 90% using smart engineering.
+  </p>
 </section>
 
-<section>
-  <h2>Skills</h2>
-  <ul>
-    <li>AWS, Azure</li>
-    <li>Docker, Kubernetes, Helm, Istio</li>
-    <li>Terraform, Ansible</li>
-    <li>GitLab CI, Jenkins</li>
-    <li>Prometheus, Grafana</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Experience</h2>
-  <p>DevOps Engineer at Kanilebettu Technologies</p>
-  <ul>
-    <li>Built CI/CD pipelines</li>
-    <li>Automated infrastructure</li>
-    <li>Reduced AWS costs by 90%</li>
-  </ul>
-</section>
-
-<section>
+<section id="projects">
   <h2>Projects</h2>
-  <p><strong>Mercotrace SaaS Application</strong></p>
-  <p>Built scalable cloud system with CI/CD and authentication.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Mercotrace SaaS</h3>
+      <p>Built scalable cloud system with CI/CD and authentication using Keycloak.</p>
+    </div>
+    <div class="card">
+      <h3>AWS Automation</h3>
+      <p>Automated infrastructure using Terraform and AWS CLI.</p>
+    </div>
+  </div>
 </section>
 
-<section>
+<section id="contact">
   <h2>Contact</h2>
   <p>Email: maheshkuruvamahesh65@gmail.com</p>
 </section>
 
+<script src="script.js"></script>
 </body>
 </html>
