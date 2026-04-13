@@ -8,6 +8,8 @@ let isDeleting = false;
 
 function typeEffect() {
   const element = document.getElementById("typing");
+  if (!element) return;
+
   const current = roles[roleIndex];
 
   if (!isDeleting) {
@@ -31,7 +33,7 @@ typeEffect();
 
 
 /* =========================
-   SCROLL REVEAL (STAGGER)
+   SCROLL REVEAL (OPTIMIZED)
 ========================= */
 const revealElements = document.querySelectorAll("section, .card");
 
@@ -42,54 +44,43 @@ function revealOnScroll() {
     const boxTop = el.getBoundingClientRect().top;
 
     if (boxTop < triggerBottom) {
-      setTimeout(() => {
-        el.classList.add("visible");
-      }, index * 120); // 🔥 stagger delay
+      el.classList.add("visible");
     }
   });
 }
 
-window.addEventListener("scroll", revealOnScroll);
-
 
 /* =========================
-   STATS COUNTER ANIMATION
+   STATS COUNTER
 ========================= */
 const counters = document.querySelectorAll(".stat h2");
-let started = false;
+let counterStarted = false;
 
 function runCounter() {
-  if (started) return;
+  if (counterStarted) return;
 
   counters.forEach(counter => {
-    const target = parseInt(counter.innerText);
+    const original = counter.innerText;
+    const target = parseInt(original);
     let count = 0;
+
+    const suffix = original.includes('%') ? '%' : '+';
 
     const update = () => {
       count += Math.ceil(target / 40);
       if (count < target) {
-        counter.innerText = count + (counter.innerText.includes('%') ? '%' : '+');
+        counter.innerText = count + suffix;
         requestAnimationFrame(update);
       } else {
-        counter.innerText = target + (counter.innerText.includes('%') ? '%' : '+');
+        counter.innerText = target + suffix;
       }
     };
 
     update();
   });
 
-  started = true;
+  counterStarted = true;
 }
-
-window.addEventListener("scroll", () => {
-  const stats = document.querySelector(".stats");
-  if (!stats) return;
-
-  const top = stats.getBoundingClientRect().top;
-  if (top < window.innerHeight - 100) {
-    runCounter();
-  }
-});
 
 
 /* =========================
@@ -98,12 +89,12 @@ window.addEventListener("scroll", () => {
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 
-window.addEventListener("scroll", () => {
+function updateActiveNav() {
   let current = "";
 
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 150;
-    if (scrollY >= sectionTop) {
+    if (window.scrollY >= sectionTop) {
       current = section.getAttribute("id");
     }
   });
@@ -114,7 +105,7 @@ window.addEventListener("scroll", () => {
       link.classList.add("active");
     }
   });
-});
+}
 
 
 /* =========================
@@ -131,25 +122,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 /* =========================
-   SCROLL PERFORMANCE BOOST
+   🔥 SINGLE OPTIMIZED SCROLL HANDLER
 ========================= */
 let ticking = false;
 
-function optimizedScroll() {
+function handleScroll() {
   if (!ticking) {
     window.requestAnimationFrame(() => {
       revealOnScroll();
+      updateActiveNav();
+
+      const stats = document.querySelector(".stats");
+      if (stats) {
+        const top = stats.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          runCounter();
+        }
+      }
+
       ticking = false;
     });
+
     ticking = true;
   }
 }
 
-window.addEventListener("scroll", optimizedScroll);
+window.addEventListener("scroll", handleScroll);
 
 
 /* =========================
-   INITIAL LOAD ANIMATION
+   INITIAL LOAD
 ========================= */
 window.addEventListener("load", () => {
   revealOnScroll();
