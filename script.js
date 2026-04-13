@@ -44,7 +44,7 @@ function revealOnScroll() {
     if (boxTop < triggerBottom) {
       setTimeout(() => {
         el.classList.add("visible");
-      }, index * 120); // 🔥 stagger delay
+      }, index * 120);
     }
   });
 }
@@ -53,7 +53,7 @@ window.addEventListener("scroll", revealOnScroll);
 
 
 /* =========================
-   STATS COUNTER ANIMATION
+   STATS COUNTER
 ========================= */
 const counters = document.querySelectorAll(".stat h2");
 let started = false;
@@ -131,6 +131,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 /* =========================
+   HERO PARALLAX (WATER FEEL)
+========================= */
+const hero = document.querySelector(".advanced-hero");
+const heroBg = document.querySelector(".hero-bg");
+const heroContent = document.querySelector(".hero-content");
+
+if (hero) {
+  hero.addEventListener("mousemove", (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 30;
+    const y = (e.clientY / window.innerHeight - 0.5) * 30;
+
+    heroBg.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
+    heroContent.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+  });
+}
+
+
+/* =========================
+   SMOKE FLOAT DYNAMIC
+========================= */
+const smokes = document.querySelectorAll(".smoke");
+
+smokes.forEach((smoke, index) => {
+  let offset = index * 50;
+
+  function animateSmoke() {
+    offset += 0.2;
+    smoke.style.transform = `
+      translateY(${Math.sin(offset / 20) * 20}px)
+      translateX(${Math.cos(offset / 25) * 20}px)
+    `;
+    requestAnimationFrame(animateSmoke);
+  }
+
+  animateSmoke();
+});
+
+
+/* =========================
    SCROLL PERFORMANCE BOOST
 ========================= */
 let ticking = false;
@@ -149,7 +188,7 @@ window.addEventListener("scroll", optimizedScroll);
 
 
 /* =========================
-   INITIAL LOAD ANIMATION
+   INITIAL LOAD
 ========================= */
 window.addEventListener("load", () => {
   revealOnScroll();
