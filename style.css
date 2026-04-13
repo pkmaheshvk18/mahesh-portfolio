@@ -1,78 +1,233 @@
-body {
+/* RESET */
+* {
   margin: 0;
-  font-family: 'Segoe UI';
-  background: #020617;
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* BODY */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e2e8f0;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
+  align-items: center;
+  padding: 20px 60px;
   position: sticky;
   top: 0;
-  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  background: rgba(2, 6, 23, 0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  z-index: 100;
+}
+
+header h2 {
+  color: #38bdf8;
+  letter-spacing: 1px;
 }
 
 nav a {
-  margin: 0 10px;
-  color: white;
+  margin: 0 15px;
   text-decoration: none;
+  color: #cbd5f5;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* HERO */
 .hero {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100vh;
+  padding: 0 60px;
+}
+
+.hero-text {
+  max-width: 600px;
 }
 
 .hero-text h1 {
-  font-size: 50px;
+  font-size: 56px;
+  margin-bottom: 10px;
 }
 
 .hero-text h2 {
   color: #38bdf8;
+  margin-bottom: 15px;
 }
 
+.hero-desc {
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* IMAGE */
 .hero-img img {
-  width: 280px;
+  width: 300px;
   border-radius: 50%;
-  box-shadow: 0 0 40px #38bdf8;
+  box-shadow: 0 0 60px rgba(56,189,248,0.5);
+  transition: 0.4s;
 }
 
+.hero-img img:hover {
+  transform: scale(1.05);
+}
+
+/* BUTTONS */
 .btn {
-  padding: 12px 25px;
-  background: #38bdf8;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
   color: black;
   text-decoration: none;
-  border-radius: 25px;
-}
-
-section {
-  padding: 80px;
-}
-
-.cards {
-  display: flex;
-  gap: 20px;
-}
-
-.card {
-  background: rgba(255,255,255,0.05);
-  padding: 25px;
-  border-radius: 15px;
+  border-radius: 30px;
+  font-weight: bold;
   transition: 0.3s;
 }
 
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 60px;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #38bdf8;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 60px;
+}
+
+.stat h2 {
+  font-size: 40px;
+  color: #38bdf8;
+}
+
+.stat p {
+  color: #94a3b8;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.4s;
+}
+
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 10px 40px rgba(56,189,248,0.2);
+}
+
+/* LISTS */
+ul {
+  margin-top: 15px;
+}
+
+ul li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+/* EXPERIENCE */
+.duration {
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .skills span {
-  background: #1e293b;
+  background: rgba(56,189,248,0.1);
+  color: #38bdf8;
   padding: 10px 15px;
-  margin: 5px;
-  display: inline-block;
-  border-radius: 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #38bdf8;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* CONTACT */
+#contact p {
+  margin-bottom: 10px;
+  color: #94a3b8;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding-top: 100px;
+  }
+
+  .hero-img img {
+    margin-top: 30px;
+    width: 220px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  header {
+    padding: 20px;
+  }
 }
