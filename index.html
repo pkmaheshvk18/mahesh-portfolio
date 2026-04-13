@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mahesh Kuruva | DevOps Engineer</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -10,7 +11,7 @@
 
 <!-- HEADER -->
 <header>
-  <h2>Mahesh</h2>
+  <h2 class="logo">Mahesh</h2>
   <nav>
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
@@ -28,13 +29,13 @@
 
     <p class="hero-desc">
       DevOps Engineer specializing in building scalable cloud infrastructure,
-      automating deployments, and optimizing costs. Successfully reduced AWS
-      infrastructure expenses by up to <strong>90%</strong> through strategic engineering.
+      automating deployments, and optimizing costs across AWS and Azure platforms.
+      Achieved up to <strong>90% cost reduction</strong> through efficient cloud strategies.
     </p>
 
     <div class="hero-buttons">
       <a href="#projects" class="btn">View Projects</a>
-      <a href="resume.pdf" class="btn secondary" target="_blank">Download Resume</a>
+      <a href="#" class="btn secondary">Download Resume</a>
     </div>
   </div>
 
@@ -43,7 +44,7 @@
   </div>
 </section>
 
-<!-- STATS (VERY IMPORTANT FOR IMPACT) -->
+<!-- STATS -->
 <section class="stats">
   <div class="stat">
     <h2>90%</h2>
@@ -51,13 +52,13 @@
   </div>
 
   <div class="stat">
-    <h2>1+</h2>
+    <h2>2+</h2>
     <p>Years Experience</p>
   </div>
 
   <div class="stat">
-    <h2>10+</h2>
-    <p>Tools & Technologies</p>
+    <h2>20+</h2>
+    <p>Technologies</p>
   </div>
 </section>
 
@@ -67,74 +68,52 @@
 
   <p>
     I am a Cloud & DevOps Engineer with hands-on experience in designing,
-    automating, and managing cloud-native applications. My expertise lies
-    in AWS, Kubernetes, Terraform, and CI/CD pipelines.
+    automating, and managing cloud-native applications across AWS and Azure.
   </p>
 
   <p>
-    I focus on solving real-world engineering challenges such as reducing
-    infrastructure costs, improving deployment speed, and ensuring system
-    reliability. I enjoy building efficient systems that scale and perform
-    under real production workloads.
+    My core expertise lies in Infrastructure as Code, CI/CD automation,
+    container orchestration, and observability. I focus on solving real-world
+    engineering challenges such as scalability, reliability, and cost efficiency.
   </p>
+
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
   <h2>Experience</h2>
 
+  <!-- AWS -->
   <div class="card">
     <h3>DevOps Engineer – Kanilebettu Technologies</h3>
-    <p class="duration">September 2024 – Present</p>
+    <p class="duration">December 2024 – November 2025</p>
 
     <ul>
-      <li>
-        Designed and implemented multi-environment CI/CD pipelines using GitLab CI,
-        enabling automated deployments to ECS (development) and EKS (production),
-        improving release consistency and reducing manual effort.
-      </li>
-
-      <li>
-        Automated AWS infrastructure provisioning using Terraform including VPC, EC2,
-        RDS, IAM, and networking, ensuring reproducible and version-controlled environments.
-      </li>
-
-      <li>
-        Managed containerized applications using Kubernetes and Helm,
-        enabling scalable and rollback-safe deployments.
-      </li>
-
-      <li>
-        Implemented Istio service mesh and Keycloak authentication,
-        improving service-to-service security and centralized access control.
-      </li>
-
-      <li>
-        Built monitoring and observability stack using Prometheus, Grafana,
-        Loki, and Alertmanager for real-time insights and alerting.
-      </li>
-
-      <li>
-        Reduced AWS CloudWatch costs by 90% using log retention policies
-        and environment-specific logging strategies.
-      </li>
-
-      <li>
-        Replaced AWS ALB with Nginx reverse proxy in development,
-        achieving 100% reduction in network-related costs.
-      </li>
-
-      <li>
-        Optimized API Gateway costs by routing internal traffic through Nginx,
-        improving performance and reducing data transfer expenses.
-      </li>
-
-      <li>
-        Led cost optimization initiatives including EC2 scheduling,
-        resource cleanup, and infrastructure right-sizing.
-      </li>
+      <li>Designed CI/CD pipelines using GitLab CI for ECS (dev) and EKS (prod)</li>
+      <li>Provisioned AWS infrastructure using Terraform (VPC, EC2, RDS, IAM)</li>
+      <li>Managed Kubernetes workloads using Helm for scalable deployments</li>
+      <li>Implemented Istio service mesh and Keycloak authentication</li>
+      <li>Built monitoring stack using Prometheus, Grafana, and Alertmanager</li>
+      <li>Reduced CloudWatch costs by 90% using log optimization</li>
+      <li>Replaced ALB with Nginx reducing dev network cost by 100%</li>
     </ul>
   </div>
+
+  <!-- AZURE -->
+  <div class="card">
+    <h3>Azure DevOps Engineer – Viveja IT Services</h3>
+    <p class="duration">November 2025 – Present</p>
+
+    <ul>
+      <li>Designed CI/CD pipelines using Azure DevOps YAML pipelines</li>
+      <li>Automated build and release processes for .NET and Angular apps</li>
+      <li>Managed Azure infrastructure (VMs, VNets, AKS, Load Balancer)</li>
+      <li>Implemented Terraform for infrastructure automation</li>
+      <li>Containerized applications using Docker and deployed to AKS</li>
+      <li>Integrated SonarQube for code quality and security checks</li>
+    </ul>
+  </div>
+
 </section>
 
 <!-- PROJECTS -->
@@ -145,41 +124,20 @@
 
     <div class="card">
       <h3>Mercotrace – SaaS Platform</h3>
-
       <ul>
-        <li>
-          Developed a scalable multi-environment SaaS application using AWS and Kubernetes.
-        </li>
-
-        <li>
-          Integrated Keycloak for centralized authentication and authorization.
-        </li>
-
-        <li>
-          Designed CI/CD pipelines for automated build and deployment processes.
-        </li>
-
-        <li>
-          Achieved 30% cost optimization through efficient resource utilization.
-        </li>
+        <li>Developed scalable SaaS platform using AWS and Kubernetes</li>
+        <li>Integrated Keycloak for centralized authentication</li>
+        <li>Implemented CI/CD pipelines for automated deployment</li>
+        <li>Achieved ~30% infrastructure cost optimization</li>
       </ul>
     </div>
 
     <div class="card">
-      <h3>AWS Cost Optimization</h3>
-
+      <h3>Cloud Cost Optimization System</h3>
       <ul>
-        <li>
-          Reduced infrastructure costs by 90% through log optimization and resource tuning.
-        </li>
-
-        <li>
-          Implemented EC2 scheduling and right-sizing strategies.
-        </li>
-
-        <li>
-          Optimized CloudWatch and API Gateway usage to minimize expenses.
-        </li>
+        <li>Reduced AWS cloud costs by up to 90%</li>
+        <li>Optimized CloudWatch, EC2, and API Gateway usage</li>
+        <li>Implemented resource scheduling and right-sizing strategies</li>
       </ul>
     </div>
 
@@ -192,6 +150,7 @@
 
   <div class="skills">
     <span>AWS</span>
+    <span>Azure</span>
     <span>Kubernetes</span>
     <span>Terraform</span>
     <span>Docker</span>
