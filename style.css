@@ -151,15 +151,13 @@ section {
 }
 
 /* 🔥 SCROLL ANIMATION */
-section,
-.card {
+section, .card {
   opacity: 0;
   transform: translateY(60px) scale(0.98);
   transition: all 0.8s ease;
 }
 
-section.visible,
-.card.visible {
+section.visible, .card.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
@@ -277,7 +275,8 @@ ul li {
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media(max-width: 900px) {
+
   .hero {
     flex-direction: column;
     text-align: center;
