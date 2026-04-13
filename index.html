@@ -8,6 +8,7 @@
 
 <body>
 
+<!-- HEADER -->
 <header>
   <h2>Mahesh</h2>
   <nav>
@@ -19,72 +20,205 @@
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-text">
     <h1>Mahesh Kuruva</h1>
     <h2 id="typing"></h2>
-    <p>Reduced AWS costs by 90% through smart cloud engineering.</p>
-    <a href="#projects" class="btn">Explore Work</a>
+
+    <p class="hero-desc">
+      DevOps Engineer specializing in building scalable cloud infrastructure,
+      automating deployments, and optimizing costs. Successfully reduced AWS
+      infrastructure expenses by up to <strong>90%</strong> through strategic engineering.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="resume.pdf" class="btn secondary" target="_blank">Download Resume</a>
+    </div>
   </div>
 
   <div class="hero-img">
-    <img src="image.jpg">
+    <img src="image.jpg" alt="Mahesh">
   </div>
 </section>
 
+<!-- STATS (VERY IMPORTANT FOR IMPACT) -->
+<section class="stats">
+  <div class="stat">
+    <h2>90%</h2>
+    <p>Cost Reduction</p>
+  </div>
+
+  <div class="stat">
+    <h2>1+</h2>
+    <p>Years Experience</p>
+  </div>
+
+  <div class="stat">
+    <h2>10+</h2>
+    <p>Tools & Technologies</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
+
   <p>
-    Cloud & DevOps Engineer with 1+ year experience in automating deployments,
-    managing cloud-native applications, and optimizing infrastructure costs.
-    Skilled in AWS, Kubernetes, Terraform, and CI/CD pipelines.
+    I am a Cloud & DevOps Engineer with hands-on experience in designing,
+    automating, and managing cloud-native applications. My expertise lies
+    in AWS, Kubernetes, Terraform, and CI/CD pipelines.
+  </p>
+
+  <p>
+    I focus on solving real-world engineering challenges such as reducing
+    infrastructure costs, improving deployment speed, and ensuring system
+    reliability. I enjoy building efficient systems that scale and perform
+    under real production workloads.
   </p>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
   <h2>Experience</h2>
+
   <div class="card">
     <h3>DevOps Engineer – Kanilebettu Technologies</h3>
+    <p class="duration">September 2024 – Present</p>
+
     <ul>
-      <li>Built CI/CD pipelines for ECS & EKS</li>
-      <li>Automated infrastructure using Terraform</li>
-      <li>Implemented Istio & Keycloak security</li>
-      <li>Reduced CloudWatch costs by 90%</li>
-      <li>Replaced ALB with Nginx (100% dev cost saving)</li>
+      <li>
+        Designed and implemented multi-environment CI/CD pipelines using GitLab CI,
+        enabling automated deployments to ECS (development) and EKS (production),
+        improving release consistency and reducing manual effort.
+      </li>
+
+      <li>
+        Automated AWS infrastructure provisioning using Terraform including VPC, EC2,
+        RDS, IAM, and networking, ensuring reproducible and version-controlled environments.
+      </li>
+
+      <li>
+        Managed containerized applications using Kubernetes and Helm,
+        enabling scalable and rollback-safe deployments.
+      </li>
+
+      <li>
+        Implemented Istio service mesh and Keycloak authentication,
+        improving service-to-service security and centralized access control.
+      </li>
+
+      <li>
+        Built monitoring and observability stack using Prometheus, Grafana,
+        Loki, and Alertmanager for real-time insights and alerting.
+      </li>
+
+      <li>
+        Reduced AWS CloudWatch costs by 90% using log retention policies
+        and environment-specific logging strategies.
+      </li>
+
+      <li>
+        Replaced AWS ALB with Nginx reverse proxy in development,
+        achieving 100% reduction in network-related costs.
+      </li>
+
+      <li>
+        Optimized API Gateway costs by routing internal traffic through Nginx,
+        improving performance and reducing data transfer expenses.
+      </li>
+
+      <li>
+        Led cost optimization initiatives including EC2 scheduling,
+        resource cleanup, and infrastructure right-sizing.
+      </li>
     </ul>
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
+
   <div class="cards">
+
     <div class="card">
-      <h3>Mercotrace SaaS</h3>
-      <p>Multi-environment cloud system with CI/CD and Keycloak authentication.</p>
+      <h3>Mercotrace – SaaS Platform</h3>
+
+      <ul>
+        <li>
+          Developed a scalable multi-environment SaaS application using AWS and Kubernetes.
+        </li>
+
+        <li>
+          Integrated Keycloak for centralized authentication and authorization.
+        </li>
+
+        <li>
+          Designed CI/CD pipelines for automated build and deployment processes.
+        </li>
+
+        <li>
+          Achieved 30% cost optimization through efficient resource utilization.
+        </li>
+      </ul>
     </div>
 
     <div class="card">
       <h3>AWS Cost Optimization</h3>
-      <p>Achieved 90% cost reduction using log optimization and resource tuning.</p>
+
+      <ul>
+        <li>
+          Reduced infrastructure costs by 90% through log optimization and resource tuning.
+        </li>
+
+        <li>
+          Implemented EC2 scheduling and right-sizing strategies.
+        </li>
+
+        <li>
+          Optimized CloudWatch and API Gateway usage to minimize expenses.
+        </li>
+      </ul>
     </div>
+
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
+
   <div class="skills">
-    <span>AWS</span><span>Kubernetes</span><span>Terraform</span>
-    <span>Docker</span><span>Jenkins</span><span>GitLab CI</span>
-    <span>Prometheus</span><span>Grafana</span><span>Istio</span>
+    <span>AWS</span>
+    <span>Kubernetes</span>
+    <span>Terraform</span>
+    <span>Docker</span>
+    <span>Jenkins</span>
+    <span>GitLab CI</span>
+    <span>ArgoCD</span>
+    <span>Prometheus</span>
+    <span>Grafana</span>
+    <span>Istio</span>
+    <span>Nginx</span>
+    <span>Keycloak</span>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
+
   <p>Email: maheshkuruvamahesh65@gmail.com</p>
   <p>LinkedIn: linkedin.com/in/iammaheshkuruva</p>
+
+  <a href="mailto:maheshkuruvamahesh65@gmail.com" class="btn">
+    Let's Connect
+  </a>
 </section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
